@@ -46,3 +46,13 @@ exports.getOneChapter = async (req, res, next) => {
     res.render("chapters/chapter-page", { chapter });
   } catch (error) {}
 };
+
+// exports.displayChapterSearch = async (req, res, next) => {
+//   try {
+//     const search = req.query.search;
+//     const chapters = await searchChapter(search);
+//     res.render("home", { chapters });
+//   } catch (error) {
+//     next(error);
+//   }
+// };
