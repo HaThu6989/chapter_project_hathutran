@@ -8,8 +8,8 @@ const {
 
 const router = express.Router();
 
-router.get("/create-form", createForm);
-router.post("/create", createChapter);
+router.get("/new", createForm);
+router.post("/new", createChapter);
 router.delete("/delete/:chapterId", deleteChapter);
 router.get("/:chapterId", getOneChapter);
 

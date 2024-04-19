@@ -1,1 +1,8 @@
-h1 Liste des chapitres 
+h1 Liste des chapitres
+
+.d-flex.flex-wrap
+  if chapters
+    each chapter in chapters
+        include chapter.pug
+  else
+    p No chapters available.

@@ -1,15 +1,14 @@
-.card.mb-3
-  .card-body
+extends ../layout.pug
+
+block content
+  if chapter
+  .m-5 
     h5.card-title #{chapter.title}
-
     p.card-text Number of Lessons: #{chapter.nbLessons}
-
     if chapter.active
       span.badge.bg-success.text-light Active
     else
       span.badge.bg-warning.text-dark Inactive
 
-    .d-flex.mt-3
-        a.btn.btn-primary.mx-1(href=`/chapter/${chapter._id}`)  Voir
 
-        button.btn.btn-danger.mx-1(type="button" onclick="deleteChapter('#{chapter._id}')") Supprimer
+  
