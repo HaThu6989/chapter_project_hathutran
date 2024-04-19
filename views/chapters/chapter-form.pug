@@ -1,0 +1,18 @@
+.chapter-form
+  h1 Chapter Form 
+
+  form#create-form.card(action="/chapter/create", method="POST")
+      .card-body 
+          .form-group
+              label(for="title") Title
+              input#title.form-control(type="text", name="title")
+
+          .form-group
+              label(for="nbLessons") Number of lessons
+              input#nbLessons.form-control(type="number", name="nbLessons")
+
+          .form-check
+              input#active.form-check-input(type="checkbox", name="active")
+              label.form-check-label(for="active") active
+
+          button.btn.btn-primary.mt-2(type="submit") Submit
