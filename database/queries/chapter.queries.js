@@ -13,3 +13,7 @@ exports.createNewChapter = async (request) => {
   });
   return newChapter.save();
 };
+
+exports.deleteChapter = (chapterId) => {
+  return Chapter.findByIdAndDelete(chapterId).exec();
+};

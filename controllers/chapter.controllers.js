@@ -2,6 +2,7 @@ const Chapter = require("../database/models/chapter.model");
 const {
   getAllChapters,
   createNewChapter,
+  deleteChapter,
 } = require("../database/queries/chapter.queries");
 
 exports.displayChapterList = async (req, res, next) => {
@@ -27,7 +28,15 @@ exports.createChapter = async (req, res, next) => {
   }
 };
 
-exports.deleteChapter = (req, res, next) => {};
+exports.deleteChapter = async (req, res, next) => {
+  try {
+    const chapterId = req.params.chapterId;
+    await deleteChapter(chapterId);
+    res.end();
+  } catch (error) {
+    next(error);
+  }
+};
 
 exports.getOneChapter = async (req, res, next) => {
   try {

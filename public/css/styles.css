@@ -11,3 +11,14 @@
 .chapter-form{
   width: 500px;
 }
+
+.search-bar form {
+  padding: .5rem 1.5rem;
+  background-color: rgb(206, 198, 198);
+  border-radius: 5px;
+}
+
+.search-bar form input {
+  border: none;
+  margin-left: .5rem;
+}

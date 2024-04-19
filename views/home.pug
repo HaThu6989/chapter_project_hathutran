@@ -1,6 +1,14 @@
 extends layout.pug
 
 block content
+  script(src="js/delete-chapter.js" defer type="module")
+  script(src="js/create-chapter.js" defer type="module")
+  script(src="js/search-chapter.js" defer type="module")
   .chapter-container
     include chapters/chapter-form.pug
+    .search-bar.mx-5 
+      form
+          i.fa-solid.fa-magnifying-glass 
+          input#search-input(type="text", name="search" placeholder= "Chercher un chapitre")
+      #search-menu-container 
     include chapters/chapter-list.pug

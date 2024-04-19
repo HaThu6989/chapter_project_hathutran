@@ -12,4 +12,5 @@
     .d-flex.mt-3
         a.btn.btn-primary.mx-1(href=`/chapter/${chapter._id}`)  Voir
 
-        button.btn.btn-danger.mx-1(type="button" onclick="deleteChapter('#{chapter._id}')") Supprimer
+        button.btn.btn-danger.mx-1(type="button")
+          .delete-chapter(data-chapterid= chapter._id) Supprimer

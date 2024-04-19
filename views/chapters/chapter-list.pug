@@ -1,8 +1,9 @@
 h1 Liste des chapitres
 
-.d-flex.flex-wrap
+#chapter-list-container.d-flex.flex-wrap
   if chapters
     each chapter in chapters
+      .chapter-card
         include chapter.pug
   else
     p No chapters available.
